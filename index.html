@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <section class="caja_titulo">
+        <h1>Encriptador de texto</h1>
+    </section>
+    <div class="caja_principal">
+        <section class="seccion_encriptar">
+            <div class="caja_texto">
+                <textarea name="" id="texto_usuario" placeholder="Ingrese el texto aqui"></textarea>
+            </div>
+            <p class="info"><i class='bx bxs-info-square'></i> Solo letras minúsculas y sin acentos</p>
+            <div class="botones">
+                <button onclick="encriptarTexto();" class="boton_encriptar">Encriptar</button>
+                <button onclick="desencriptarTexto();" class="boton_desencriptar">Desencritpar</button>
+            </div>
+        </section>
+        <section class="seccion_encriptado">
+            <div class="caja_texto_encriptado">
+                <div class="sin_texto">
+                    <img class="img-busqueda" src="./img/busqueda.png" alt="">
+                    <h4 class="info-h1">Ningun mensaje fue encontrado</h4>
+                    <p class="info-p">Ingresa el texto que deses encriptar o desencritpar</p>
+                </div>
+            </div>
+            <div>
+                <button onclick="copiarTexto();" class="boton_copiar">Copiar</button>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>Graciany Baeza Jara-</p>
+        <p> Año de creación: 2024</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
