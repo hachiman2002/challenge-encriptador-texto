@@ -182,6 +182,7 @@ footer{
     .caja_principal{
         flex-direction: column;
         padding: 0 10%;
+        flex: 1;
     }
     .seccion_encriptar{
         width: 100%;
@@ -208,6 +209,7 @@ footer{
 
     .seccion_encriptado{
         width: 100%;
+        height: 18em;
         margin-top: 5em;
     }
     .img-busqueda{
