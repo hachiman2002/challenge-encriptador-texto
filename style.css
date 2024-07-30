@@ -215,6 +215,10 @@ footer{
         height: 18em;
         margin-top: 3em;
     }
+
+    .parrafo_texto_resultado {
+        overflow-wrap: break-word; /* O word-wrap: break-word; */
+    }
     .img-busqueda{
         width: 30%;
     }

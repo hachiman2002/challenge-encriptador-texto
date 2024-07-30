@@ -17,12 +17,26 @@ function limpiarCajaTextoResultado(){
     }
 }
 
+function validaciones(textoUsuario){
+    if (/[A-Z]/.test(textoUsuario) || (/[\u0300-\u036f]/.test(textoUsuario.normalize('NFD')))){
+        return true;
+    }
+}
+
 function encriptarTexto(){
     // Funcion para  limpiar la caja de texto encriptado
     limpiarCajaTextoResultado();
 
-    // Obtención del valor del texto encriptado ingresado por el usuario
+    // Obtención del valor del texto ingresado por el usuario
     let textoUsuario = document.getElementById('texto_usuario').value;
+
+    if (validaciones(textoUsuario)) {
+        alert('El texto no debe contener mayúsculas ni tildes.');
+        return;
+    }
+
+    //Verificar que el texto no contenga mayusculas ni tildes
+
     let textoEncriptado = '';
     let cajaTextoEncriptado = document.querySelector('.caja_texto_encriptado')
 
@@ -71,8 +85,14 @@ function desencriptarTexto() {
     // Funcion para  limpiar la caja de texto desencriptado
     limpiarCajaTextoResultado();
 
-    // Obtención del valor del texto encriptado ingresado por el usuario
+    // Obtención del valor del texto ingresado por el usuario
     let textoEncriptado = document.getElementById('texto_usuario').value;
+    
+    if (validaciones(textoEncriptado)) {
+        alert('El texto no debe contener mayúsculas ni tildes.');
+        return;
+    }
+
     let textoDesencriptado = '';
     let cajaTextoDesencriptado = document.querySelector('.caja_texto_encriptado');
 
