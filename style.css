@@ -216,8 +216,15 @@ footer{
         margin-top: 3em;
     }
 
+    .con_texto {
+        max-height: 200px; /* Ajusta según el tamaño deseado */
+        overflow-y: auto; /* Muestra una barra de desplazamiento vertical si es necesario */
+        /* También puedes usar hidden, scroll o visible según tu necesidad */
+    }
+    
     .parrafo_texto_resultado {
-        overflow-wrap: break-word; /* O word-wrap: break-word; */
+        overflow-wrap: break-word; /* Rompe palabras largas para evitar desbordamientos horizontales */
+        font-size: 20px;
     }
     .img-busqueda{
         width: 30%;
