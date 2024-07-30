@@ -193,6 +193,9 @@ footer{
         height: 5em;
     }
 
+    .caja_texto>textarea{
+        font-size: 20px;
+    }
     .caja_texto>textarea::placeholder {
         color: var(--dark-blue-300);
         font-size: 20px;
@@ -226,5 +229,6 @@ footer{
 
     footer{
         margin-top: 5em;
+        font-size: 14px;
     }
 }
