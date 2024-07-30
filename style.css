@@ -189,9 +189,12 @@ footer{
         box-sizing: border-box;
     }
 
+    .caja_texto{
+        text-align: center;
+    }
     .caja_texto>textarea{
         width: 80%;
-        height: 5em;
+        height: 8em;
     }
 
     .caja_texto>textarea{
@@ -210,7 +213,7 @@ footer{
     .seccion_encriptado{
         width: 100%;
         height: 18em;
-        margin-top: 5em;
+        margin-top: 3em;
     }
     .img-busqueda{
         width: 30%;
