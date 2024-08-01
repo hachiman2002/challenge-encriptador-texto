@@ -18,9 +18,17 @@ function limpiarCajaTextoResultado(){
 }
 
 function validaciones(textoUsuario){
-    if (/[A-Z]/.test(textoUsuario) || (/[\u0300-\u036f]/.test(textoUsuario.normalize('NFD')))){
+
+    // Expresión regular para caracteres especiales
+    const caracteresEspeciales = /[!@#$%^&*(),.?":{}|<>-_]/;
+
+    // Verifica si hay mayúsculas, caracteres acentuados o caracteres especiales
+    if (/[A-Z]/.test(textoUsuario) || 
+        (/[\u0300-\u036f]/.test(textoUsuario.normalize('NFD'))) || 
+        caracteresEspeciales.test(textoUsuario)) {
         return true;
     }
+    return false;
 }
 
 function encriptarTexto(){
@@ -31,7 +39,7 @@ function encriptarTexto(){
     let textoUsuario = document.getElementById('texto_usuario').value;
 
     if (validaciones(textoUsuario)) {
-        alert('El texto no debe contener mayúsculas ni tildes.');
+        alert('El texto no debe contener mayúsculas, tildes ni caracteres especiales.');
         return;
     }
 
@@ -89,7 +97,7 @@ function desencriptarTexto() {
     let textoEncriptado = document.getElementById('texto_usuario').value;
     
     if (validaciones(textoEncriptado)) {
-        alert('El texto no debe contener mayúsculas ni tildes.');
+        alert('El texto no debe contener mayúsculas, tildes ni caracteres especiales.');
         return;
     }
 

@@ -153,6 +153,17 @@ button{
     font-size: 32px;
 }
 
+.con_texto {
+    max-height: 30em; /* Ajusta según el tamaño deseado */
+    overflow-y: auto; /* Muestra una barra de desplazamiento vertical si es necesario */
+    /* También puedes usar hidden, scroll o visible según tu necesidad */
+}
+
+.parrafo_texto_resultado {
+    overflow-wrap: break-word; /* Rompe palabras largas para evitar desbordamientos horizontales */
+    font-size: 20px;
+}
+
 .boton_copiar:hover{
     background-color: var(--dark-blue-300);
     color: var(--light-blue-100);
@@ -227,11 +238,14 @@ footer{
         font-size: 20px;
     }
     .img-busqueda{
-        width: 30%;
+        width: 25%;
     }
-
+    
+    .info-h1, .info-p{
+        margin: 0.3em;
+    }
     .boton_copiar{
-        width: 13.5em;
+        width: 70%;
         height: 3.2em;
     }
 
